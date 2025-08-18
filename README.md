@@ -49,7 +49,7 @@ To set up the project locally:
 
 ## 🎬 Demo
 
-- **The app allows you to**:
+ **The app allows you to**:
 - Input hours studied and other features.
 - Click Predict to see the estimated score.
 - Visualize relationships between features and scores through interactive charts.
