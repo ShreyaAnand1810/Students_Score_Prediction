@@ -33,6 +33,7 @@ To set up the project locally:
    ```bash
    git clone https://github.com/ShreyaAnand1810/Students_Score_Prediction.git
    cd Students_Score_Prediction
+   venv\Scripts\activate
 
 2. Install dependencies:
 
