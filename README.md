@@ -33,3 +33,24 @@ To set up the project locally:
    ```bash
    git clone https://github.com/ShreyaAnand1810/Students_Score_Prediction.git
    cd Students_Score_Prediction
+
+2. Install dependencies:
+
+   ```bash
+   pip install -r requirements.txt
+
+3. Run the Streamlit application:
+
+   ```bash
+   streamlit run app.py
+
+4. Open your browser and navigate to http://127.0.0.1:8501/ to interact with the app.
+
+
+## 🎬 Demo
+
+- **The app allows you to**:
+• Input hours studied and other features.
+• Click Predict to see the estimated score.
+• Visualize relationships between features and scores through interactive charts.
+   
