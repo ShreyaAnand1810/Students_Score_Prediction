@@ -51,6 +51,19 @@ To set up the project locally:
 
  **The app allows you to**:
 - Input hours studied and other features.
-- Click Predict to see the estimated score.
+- Click **Predict** to see the estimated score.
 - Visualize relationships between features and scores through interactive charts.
-   
+
+## 📊 Model Evaluation
+
+**The model is evaluated using**:
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
+- R² Score
+
+## 🚀 Deployment
+
+The application can be deployed on Streamlit Cloud, Heroku, or AWS. Ensure all dependencies and environment configurations are included.
+
+
