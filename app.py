@@ -22,7 +22,7 @@ if st.button("Predict Final Score"):
     st.success(f"Predicted Final Score: {prediction:.2f}")
 
     # Optional: Show model performance
-    df_eval = pd.read_csv(r"C:\Users\shrey\Students_Score_Prediction\data\Students Performance.csv")
+    df_eval = pd.read_csv("data\Students Performance.csv")
     X_eval = df_eval[['Attendance', 'Hours_Studied']]
     y_eval = df_eval['Final_Score']
     y_pred_eval = model.predict(X_eval)
