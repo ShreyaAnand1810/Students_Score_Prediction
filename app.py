@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 st.title("Student Final Score Predictor 🎓")
 
 # Load trained model (update the path if needed)
-MODEL_PATH = r"C:\Users\shrey\Students_Score_Prediction\final_score_model.pkl"
+MODEL_PATH = "final_score_model.pkl"
 model = joblib.load(MODEL_PATH)
 
 st.header("🔮 Predict Final Score")
