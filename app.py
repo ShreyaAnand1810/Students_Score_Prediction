@@ -33,38 +33,3 @@ if st.button("Predict Final Score"):
 
     st.write("### Model Performance on Dataset")
     st.write(f"MSE: {mse:.2f}, MAE: {mae:.2f}, R²: {r2:.2f}")
-
-
-# --- TRAIN MODEL (Upload CSV) ---
-st.header("🛠️ Train Model from Your CSV (Hours_studied → Attendance)")
-
-uploaded_file = st.file_uploader("Upload CSV with 'Hours_studied' and 'Attendance' columns", type=["csv"])
-
-if uploaded_file is not None:
-    data = pd.read_csv(uploaded_file)
-
-    st.subheader("Dataset Preview")
-    st.write(data.head())
-
-    if "Hours_Studied" in data.columns and "Attendance" in data.columns:
-        X_train = data[["Hours_Studied"]]
-        y_train = data["Attendance"]
-
-        model2 = LinearRegression()
-        model2.fit(X_train, y_train)
-
-        # Plot
-        st.subheader("Regression Plot")
-        fig, ax = plt.subplots()
-        ax.scatter(X_train, y_train)
-        ax.plot(X_train, model2.predict(X_train))
-        ax.set_xlabel("Hours_Studied")
-        ax.set_ylabel("Attendance")
-        st.pyplot(fig)
-
-        # Save trained model
-        joblib.dump(model2, "trained_model.pkl")
-        st.success("✅ New model has been trained and saved as 'trained_model.pkl'")
-
-    else:
-        st.error("The CSV must contain 'Hours_studied' and 'Attendance' columns.")
