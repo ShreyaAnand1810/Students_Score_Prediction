@@ -17,10 +17,10 @@ attendance = st.number_input("Attendance %:", 0, 100, 80)
 hours = st.number_input("Hours Studied:", 0.0, 24.0, 4.0)
 
 if st.button("Predict Final Score"):
-    input_features = [[attendance, hours]]
+    input_features = pd.DataFrame([[attendance, hours]], columns=['Attendance', 'Hours_Studied'])
     prediction = model.predict(input_features)[0]
     st.success(f"Predicted Final Score: {prediction:.2f}")
-
+    
     # Optional: Show model performance
     df_eval = pd.read_csv("data/Students Performance.csv")
     X_eval = df_eval[['Attendance', 'Hours_Studied']]
